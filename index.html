@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickBite — Food Delivery</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <h1 class="logo">QuickBite</h1>
+
+      <nav class="nav">
+        <a href="#menu">Menu</a>
+        <div class="cart" id="cartBtn">
+          🛒 <span class="cart-count">0</span>
+        </div>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero__content">
+      <h2>Fast & Smart Food Delivery</h2>
+      <p>Delivery app for kitchen QuickBite</p>
+      <a href="#menu" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section class="menu" id="menu">
+    <div class="container">
+
+      <h2 class="section-title">Menu</h2>
+
+      <!-- Categories -->
+      <div class="categories">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="pizza">Pizza</button>
+        <button class="category-btn" data-category="burgers">Burgers</button>
+        <button class="category-btn" data-category="drinks">Drinks</button>
+        <button class="category-btn" data-category="combos">Combos</button>
+      </div>
+
+      <!-- Products grid (JS renders here) -->
+      <div class="products" id="products">
+        <!-- JS cards go here -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CART MODAL ========== -->
+<div class="cart-modal" id="cartModal">
+  <div class="cart-modal__content">
+
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+
+    <div class="cart-items">
+      <!-- JS renders items -->
+    </div>
+
+    <div class="cart-summary">
+      <div class="promo">
+        <input type="text" id="promoInput" placeholder="Promo code">
+        <button id="applyPromo">Apply</button>
+        <p class="promo-msg"></p>
+      </div>
+      <div class="checkout hidden" id="checkout">
+  <h4>Checkout</h4>
+
+  <input type="text" id="name" placeholder="Your name">
+  <input type="text" id="phone" placeholder="Phone number">
+  <input type="text" id="address" placeholder="Delivery address">
+
+  <button id="placeOrder" class="checkout-btn">
+    Place order
+  </button>
+
+  <p class="checkout-msg"></p>
+</div>
+
+      <div class="total-line">
+        <span>Total:</span>
+        <strong>$<span id="cartTotal">0.00</span></strong>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 QuickBite — Frontend Portfolio Project</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
